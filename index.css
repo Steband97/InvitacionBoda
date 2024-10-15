@@ -1,0 +1,130 @@
+/* Estilos globales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+  }
+  
+  /* Contenedor de la invitación */
+  .invitation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(''); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Tarjeta de invitación */
+  .invitation-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    background-image: url('');
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .invitation-title {
+    font-size: 36px;
+    color: #b86b77;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+      
+  }
+  .invitation-title2 {
+    font-size: 20px;
+    color: #b86b77;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+      
+  }
+  .invitation-nombres {
+    font-size: 36px;
+    color: #656e66;
+    font-family: "Great Vibes", serif;
+    font-weight: 400;
+    font-style: normal;
+      
+  }
+  
+  .invitation-message {
+    font-size: 20px;
+    margin: 20px 0;
+    color: #4a4a4a;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+      
+  }
+  
+  .rsvp-section h2 {
+    margin-bottom: 15px;
+    color: #b86b77;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  .codigo-vestimenta{
+    border-radius: 12px;
+    width: 120px;
+    height: 150px;
+  }
+  
+  #rsvp-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  /* Añade estilos para los checkboxes */
+.attendance {
+    margin: 15px 0;
+    font-size: 18px;
+  }
+  
+  .attendance label {
+    margin-right: 15px;
+    font-size: 18px;
+    display: inline-flex;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  
+  #rsvp-form button {
+    background-color: #b86b77;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  #rsvp-form button:hover {
+    background-color: #a2595f;
+  }
+  
+  /* Mensaje de confirmación */
+  .hidden {
+    display: none;
+  }
+  
+  #confirmation-message {
+    color: green;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  

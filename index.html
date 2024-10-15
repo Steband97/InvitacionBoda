@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación de Boda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('Sg6UZmz1FnY-MoRZ7')
+</script>
+</head>
+<body>
+  <div class="invitation-container-fluid">
+    <div class="invitation-card">
+      <h1 class="invitation-title">¡Te Invitamos a Nuestra Boda!</h1><br>
+      <h1 class="invitation-nombres">Steban & Luz Angela</h1>
+      <p class="invitation-message">
+        Nos haría muy felices que nos acompañaras en este dia tan especial para nosotros.
+      </p>
+      <h1 class="invitation-title2">CONSEJOS</h1>
+      <p class="invitation-message">
+        <strong>Fecha:</strong> 23 de Marzo de 2025 <br>
+        <strong>Hora:</strong> 10:00 am <br>
+        <strong>Lugar:</strong> Salón del Reino de los Testigos de Jehová<br>
+        <a href="https://maps.app.goo.gl/z8BDWXUby5Wn1fGa7">Cr. 6 # 34-75 Brr. Centro, Montería, Córdoba.</a>
+      </p>
+      <div class="container-fluid">
+        <div class="row text-center">
+          <div class="col-6">
+            <h1 class="invitation-message">Código de Vestimenta</h1>
+            <img class="codigo-vestimenta" src="./imagenes/Prueba Boda.jpg" width="100" height="100" alt="">
+          </div>
+          <div class="col-6">
+            <h1 class="invitation-message">Colores Reservados</h1>
+            <img class="codigo-vestimenta" src="./imagenes/Prueba Boda.jpg" width="100" height="100" alt="">
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <div class="rsvp-section">
+        <button class="attendance btn btn-primary" type="button" id="confirm-button" data-bs-toggle="modal" data-bs-target="#Modal-Asistencia">
+          Confirmar Asistencia
+        </button>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="Modal-Asistencia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Confirmación de Asistencia</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="modal-form">
+                <div class="mb-3">
+                  <label for="name-input" class="form-label">Nombre Completo</label>
+                  <input type="text" class="form-control" id="name-input" placeholder="Tu nombre Aquí" required>
+                </div>
+                <div class="mb-3">
+                  <label>¿Asistirás?</label>
+                  <div>
+                    <label><input type="radio" name="attendance" value="Sí" required> Sí</label>
+                    <label><input type="radio" name="attendance" value="No" required> No</label>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="submit" class="btn btn-primary" form="modal-form" id="confirm-attendance">Confirmar Asistencia</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="index.js"></script>
+</body>
+</html>
