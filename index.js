@@ -42,3 +42,38 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
+  
+  
+  // Definir la fecha del evento
+  const eventDate = new Date('March 23, 2025 10:00:00').getTime();
+
+  // Actualizar el contador cada 1 segundo
+  const countdownInterval = setInterval(function() {
+
+    // Obtener la fecha y hora actuales
+    const now = new Date().getTime();
+
+    // Calcular la distancia entre la fecha actual y la fecha del evento
+    const distance = eventDate - now;
+
+    // Calcular el tiempo en días, horas, minutos y segundos
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Actualizar los valores en el HTML
+    document.getElementById("days").innerHTML = days < 10 ? '0' + days : days;
+    document.getElementById("hours").innerHTML = hours < 10 ? '0' + hours : hours;
+    document.getElementById("minutes").innerHTML = minutes < 10 ? '0' + minutes : minutes;
+    document.getElementById("seconds").innerHTML = seconds < 10 ? '0' + seconds : seconds;
+
+    // Si el contador ha terminado, mostrar un mensaje
+    if (distance < 0) {
+      clearInterval(countdownInterval);
+      document.getElementById("days").innerHTML = "00";
+      document.getElementById("hours").innerHTML = "00";
+      document.getElementById("minutes").innerHTML = "00";
+      document.getElementById("seconds").innerHTML = "00";
+    }
+  }, 1000);

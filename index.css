@@ -5,6 +5,107 @@ body {
     padding: 0;
     background-color: #f7f7f7;
   }
+
+  /* Imagen de inicio */
+/* Contenedor de la imagen y el texto */
+.image-text-container {
+  position: relative;
+  text-align: center;
+}
+
+.background-image {
+  width: 100%;
+  height: 670px;
+  opacity: 0.8; /* Opacidad de la imagen */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Capa de opacidad sobre la imagen */
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.invitation-message1 {
+  position: absolute;
+  top: 50px; /* Ajusta la distancia del párrafo desde la parte superior */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  color: white;
+  font-weight: 600;
+  font-style: normal;
+}
+.icon-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: white;
+  animation: bounce 2s infinite; /* Aplicamos la animación */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0); /* Posición inicial y final */
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px); /* Mueve el ícono hacia arriba */
+  }
+}
+
+
+
+
+
+  
+  /* Estilo general del contenedor */
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-family: "Cormorant Garamond", serif;
+
+}
+
+/* Estilo de cada item (Días, Horas, Minutos, Segundos) */
+.countdown-item {
+  text-align: center;
+  min-width: 60px;
+}
+
+/* Números del contador */
+.countdown-number {
+  font-size: 28px;
+  color: #b86b77; /* Color del texto */
+  
+}
+
+/* Etiquetas (DAYS, HOURS, etc.) */
+.countdown-label {
+  font-size: 14px;
+  color: #656e66; /* Color más claro para las etiquetas */
+}
+
+
   
   /* Contenedor de la invitación */
   .invitation-container {
@@ -45,11 +146,20 @@ body {
       
   }
   .invitation-nombres {
-    font-size: 36px;
-    color: #656e66;
+    font-size: 40px;
+    color: white;
     font-family: "Great Vibes", serif;
     font-weight: 400;
     font-style: normal;
+      
+  }
+  .invitation-nombres2 {
+    font-size: 40px;
+    color: white;
+    font-family: "Great Vibes", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 10px;
       
   }
   
@@ -62,7 +172,86 @@ body {
     font-style: normal;
       
   }
+
+  .btn-ubicacion{
+    background-color: #a2595f; 
+    color: white;
+    margin-top: 5px;
+    text-align: center;
+    border-radius: 18px;
+    border:solid 0px;
+    font-size: medium;
+    padding: 3px;
+    width: 40%;
+  }
+  .btn-ubicacion:hover{
+    background-color:#b86b77;
+    color: whitesmoke;
+  }
+  /* Efecto de salto al pasar el mouse */
+.btn-ubicacion:hover i {
+  animation: jump 0.5s ease;
+}
+
+/* Efecto de salto al hacer clic */
+.btn-ubicacion:active i {
+  animation: jump 0.3s ease;
+}
+
+/* Animación de brinco */
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
   
+.btn-asistencia{
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #a2595f;
+  color: white;
+  margin-top: 5px;
+  text-align: center;
+  border-radius: 18px;
+  border:solid 0px;
+  font-size: large;
+  padding: 3px;
+  width: 80%;
+}
+.btn-asistencia:hover{
+  background-color:#b86b77;
+  color: whitesmoke;
+}
+  
+.btn-asistencia-modal{
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #a2595f;
+  color: white;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+  border-radius: 18px;
+  border:solid 0px;
+  font-size: large;
+  padding: 3px;
+  width: 90%;
+}
+.btn-asistencia-modal:hover{
+  background-color:#b86b77;
+  color: whitesmoke;
+}
+  
+
+
+
   .rsvp-section h2 {
     margin-bottom: 15px;
     color: #b86b77;

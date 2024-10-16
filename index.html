@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="index.css">
   <script type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -19,19 +20,69 @@
 </head>
 <body>
   <div class="invitation-container-fluid">
+    <div class="image-text-container">
+      <img src="./imagenes/Prueba Boda.jpg" class="background-image" alt="Imagen Boda">
+      <div class="overlay"></div>
+      <div class="text-overlay">
+        <p class="invitation-message1">23 - 03 - 2025</p>
+        <h1 class="invitation-nombres">Steban <br>  y </h1>
+        <h1 class="invitation-nombres2">Luz &nbsp; Angela</h1>
+        <div class="icon-down">
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+    </div>
+    
     <div class="invitation-card">
-      <h1 class="invitation-title">¡Te Invitamos a Nuestra Boda!</h1><br>
-      <h1 class="invitation-nombres">Steban & Luz Angela</h1>
+      <h1 class="invitation-message">FALTAN</h1>
+      <div class="countdown-container">
+        <div class="countdown-item">
+          <div class="countdown-number" id="days">00</div>
+          <div class="countdown-label">DAYS</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-number" id="hours">00</div>
+          <div class="countdown-label">HOURS</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-number" id="minutes">00</div>
+          <div class="countdown-label">MINUTES</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-number" id="seconds">00</div>
+          <div class="countdown-label">SECONDS</div>
+        </div>
+      </div><hr>
+      
+      <p id="countdown"></p> <!-- Este párrafo mostrará el contador -->
+      <!-- <h1 class="invitation-title">¡Te Invitamos a Nuestra Boda!</h1><br>
+      <h1 class="invitation-nombres">Steban &nbsp; & &nbsp;Luz &nbsp;Angela</h1> -->
+
       <p class="invitation-message">
-        Nos haría muy felices que nos acompañaras en este dia tan especial para nosotros.
-      </p>
+        Nos haría muy felices que nos acompañaras en este dia tan especial para nosotros.&nbsp;&nbsp;
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Boda+de+Steban+%26+Luz+Angela&dates=20250323T100000Z/20250323T120000Z&details=Nos+haría+muy+felices+que+nos+acompañaras+en+este+dia+tan+especial+para+nosotros.&location=Salón+del+Reino+de+los+Testigos+de+Jehová,+Cra.+6+#34-73,+Montería,+Córdoba" target="_blank">
+          <button class="btn-ubicacion" type="button">
+            <i class="fas fa-calendar-check"></i>&nbsp; Agendar
+          </button>
+        </a>
+       </p><hr>
+
+      
+      <br>
       <h1 class="invitation-title2">CONSEJOS</h1>
       <p class="invitation-message">
         <strong>Fecha:</strong> 23 de Marzo de 2025 <br>
         <strong>Hora:</strong> 10:00 am <br>
-        <strong>Lugar:</strong> Salón del Reino de los Testigos de Jehová<br>
-        <a href="https://maps.app.goo.gl/z8BDWXUby5Wn1fGa7">Cr. 6 # 34-75 Brr. Centro, Montería, Córdoba.</a>
+        <strong>Lugar:</strong> Salón del Reino de los Testigos de Jehová, floresta<br>
+        <a href="https://maps.app.goo.gl/z8BDWXUby5Wn1fGa7" target="_blank">
+          <button class=" btn-ubicacion" type="button">
+            <i class="fas fa-map-marker-alt"></i> &nbsp;Ubicación
+          </button>
+        </a>
       </p>
+      
+    
+      
       <div class="container-fluid">
         <div class="row text-center">
           <div class="col-6">
@@ -46,9 +97,10 @@
       </div>
       <br><br>
       <div class="rsvp-section">
-        <button class="attendance btn btn-primary" type="button" id="confirm-button" data-bs-toggle="modal" data-bs-target="#Modal-Asistencia">
-          Confirmar Asistencia
+        <button class="attendance btn btn-asistencia" type="button" id="confirm-button" data-bs-toggle="modal" data-bs-target="#Modal-Asistencia">
+          <i class="fas fa-heart"></i> &nbsp;Confirmar Asistencia
         </button>
+        
       </div>
       <!-- Modal -->
       <div class="modal fade" id="Modal-Asistencia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -73,9 +125,7 @@
                 </div>
               </form>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              <button type="submit" class="btn btn-primary" form="modal-form" id="confirm-attendance">Confirmar Asistencia</button>
+              <button type="submit" class="btn btn-asistencia-modal" form="modal-form" id="confirm-attendance">Confirmar Asistencia &nbsp;  <i class="fas fa-heart"></i></button>
             </div>
           </div>
         </div>
