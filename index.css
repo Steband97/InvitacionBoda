@@ -337,4 +337,23 @@ a.invitation-message1 {
     font-size: 18px;
     margin-top: 20px;
   }
+  .custom-title {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .custom-text {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .custom-popup {
+    border-radius: 15px; /* Por ejemplo, puedes personalizar el contenedor */
+    padding: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
   
